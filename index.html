@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Libro de Poemas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .content {
+            display: none;
+            padding: 20px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .login {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .login input {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .login button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <h2>Accede a Mi Libro de Poemas</h2>
+        <input type="password" id="password" placeholder="Introduce la contraseña">
+        <button onclick="checkPassword()">Acceder</button>
+    </div>
+
+    <div class="content" id="content">
+        <h1>Mi Libro de Poemas</h1>
+        <p>Aquí vas a encontrar todos mis poemas y el proceso de creación.</p>
+        <p>Poema 1: (Tú poema aquí)</p>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if(password === "tucontraseña") { // Cambia esto por la contraseña que prefieras
+                document.getElementById("content").style.display = "block";
+                document.querySelector(".login").style.display = "none";
+            } else {
+                alert("Contraseña incorrecta.");
+            }
+        }
+    </script>
+</body>
+</html>
